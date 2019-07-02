@@ -29,51 +29,41 @@
       </div>
     </nav>
 
-    <table style="width:100%" style="border:2px solid black">
-            <tr>
-              <th>Imie</th>
-              <th>Nazwisko</th> 
-              <th>Miasto</th>
-              <th>Kod pocztowy</th>
-              <th>Telefon</th>
-              <th>Kontakt</th>
-            </tr>
-            <tr>
-              <td>Sebastian</td>
-              <td>Pan</td>
-              <td>Kraków</td>
-              <td>22-100</td>
-              <td>51554215451</td>
-              <td>     
-                   <div class="mt-5">
-                    <button class="btn btn-primary col-3">Button</button>
-                  </div>
-                </td>
-            </tr>
-            <tr>
-                    <td>arel</td>
-                    <td>asdas</td>
-                    <td>krwao</td>
-                    <td>209-123</td>
-                    <td>123123123</td>
-                    <td>     
-                            <div class="mt-5">
-                             <button class="btn btn-primary col-3">Button</button>
-                           </div>
-                         </td>
-                  </tr>
-            <tr>
-              <td>asdas</td>
-              <td>adsada</td>
-              <td>asdsadas</td>
-              <td>123-132</td>
-              <td>1231231321</td>
-              <td>     
-                    <div class="mt-5">
-                     <button class="btn btn-primary col-3">Button</button>
-                   </div>
-                 </td>
-            </tr>
-          </table>
+    <div id="all-leads-container"></div>
+
+    <script id="all-leads-template" type="x-tmpl-mustache">
+      <table style="width:100%" style="border:2px solid black">
+        {{#data}}
+        <tr>
+          <th>Imie</th>
+          <th>Nazwisko</th>
+          <th>Adres</th>
+          <th>Status Leada</th>
+          <th>Telefon</th>
+          <th>Kontakt</th>
+        </tr>
+        <tr>
+          <td>{{firstName}}</td>
+          <td>{{lastName}}</td>
+          <td>{{address}}</td>
+          <td>{{status}}</td>
+          <td>{{phoneNumber}}</td>
+          <td>
+               <div class="">
+                <button class="btn btn-primary">Button</button>
+              </div>
+            </td>
+        </tr>
+        {{/data}}
+      </table>
+    </script>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/another-rest-client/rest-client.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/mustache/mustache.min.js"></script>
+    <script src="js/rest-client.js"></script>
+    <script src="js/lead.js"></script>
+
     </body>
     </html>
