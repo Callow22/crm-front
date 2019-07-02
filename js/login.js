@@ -28,7 +28,7 @@ var oLogin = {
               break;
 
             case "seller":
-              location.assign("lead.html");
+              location.assign("/task.html");
               break;
           }
         })
