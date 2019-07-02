@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>costam</title>
 
-    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-  </head>
-  <body>
-    <!-- NAVBAr -->
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <head>
+        <meta charset="utf-8">
+        <title>costam</title>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Leady</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Spotkania</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+        <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+      </head>
 
-
-
-    <div class="container">
-      <div class="mt-5">
-        <button class="btn btn-primary col-3">HAHA jaki piekny baton</button>
-        <div id="test">GOWNO ZJEDZ JE ROWNO</div>
-      </div>
+<body>
+    <div id="panel" class="container mt-5">
+      <div class="text-center">
+        <h2 class="text-primary">Zaloguj się do systemu CRM</h2>
+          <div>
+            <form>
+              <div>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+              </div>
+              <div>
+                <label for="password">Hasło:</label>
+                <input type="password" id="password" name="password">
+              </div>
+              <div>
+                <input type="checkbox"><label class="check" for="checkbox">Zapamiętaj mnie!</label>
+                <button id="login-btn" class="btn btn-primary" type="button">Zaloguj!</button>
+              </div>
+            </form>
+          </div>
+          <div class="row mt-3">
+            <div class="col-4"></div>
+            <div id="login-error" class="alert alert-danger col-4" style="display:none" role="alert">
+              Podane dane nie są poprawne
+            </div>
+          </div>
+        </div>
     </div>
 
 
+
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/another-rest-client/rest-client.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/jquerycheck.js"></script>
-  </body>
+    <script src="js/rest-client.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
 </html>

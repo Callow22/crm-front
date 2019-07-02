@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Callow22/crm-front#readme",
   "dependencies": {
+    "another-rest-client": "^0.5.0",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1"
   }
