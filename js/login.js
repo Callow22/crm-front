@@ -28,12 +28,11 @@ var oLogin = {
               break;
 
             case "seller":
-              location.assign("/task.html");
+              location.assign("/events.html");
               break;
           }
         })
         .catch(function(err) {
-          console.log("here");
           $(oLogin.sel.loginError).show();
         });
     });

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>costam</title>
+
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <!-- NAVBAr -->
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Leady</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Spotkania</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="events-container"></div>
+
+    <script id="events-template" type="x-tmpl-mustache">
+      <h2 class="text-primary">Moje najbliższe spotkania</h2>
+      <table style="width:100%" style="border:2px solid black">
+        {{#data}}
+        <tr>
+          <th>Imie</th>
+          <th>Nazwisko</th>
+          <th>Adres</th>
+          <th>Telefon</th>
+          <th>Data</th>
+        </tr>
+        <tr>
+          {{#leadData}}
+          <td>{{firstName}}</td>
+          <td>{{lastName}}</td>
+          <td>{{address}}</td>
+          <td>{{phoneNumber}}</td>
+          {{/leadData}}
+          <td>{{date}}</td>
+
+        </tr>
+        {{/data}}
+      </table>
+    </script>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/another-rest-client/rest-client.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/mustache/mustache.min.js"></script>
+    <script src="js/rest-client.js"></script>
+    <script src="js/event.js"></script>
+
+    </body>
+    </html>
